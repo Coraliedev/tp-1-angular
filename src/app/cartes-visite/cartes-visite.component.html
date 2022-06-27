@@ -1,0 +1,22 @@
+<div *ngFor="let user of json1" [hidden]="hidden">
+  <div class="background" *ngIf="(user.id)%2==0">
+  <div class="card-header" >
+    {{ user.company.name }}
+    <div class="card" >
+      <div class="name" >
+        {{ user.name }}
+      </div>
+      <div class="info" >
+        <p>Site: {{ user.website }}</p>
+        <p>email: {{ user.email }}</p>
+        <p>Téléphone: {{ user.phone }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<button (click)="toggle()">Cacher/afficher</button>
+
+
+
